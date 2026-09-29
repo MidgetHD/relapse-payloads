@@ -25,6 +25,8 @@ Open `https://midgethd.github.io/relapse-payloads/` on the PS5. Once the exploit
 reports `elfldr is up on 127.0.0.1:9021`, use the on-page menu to send Kstuff,
 ShadowMountPlus, then etaHEN in that order. The page sends each ELF from the
 console to its own loader; GitHub Pages only serves the files.
+The extra menu entries load only after `elfldr` succeeds, leaving SonicIso's
+original payload list in place while the exploit runs.
 
 | Menu item | File | Source | SHA-256 |
 | --- | --- | --- | --- |

@@ -37,7 +37,7 @@
 <div id="console"></div>
 
 <script src="rop.js"></script>
-<script src="payloads.js?v=1"></script>
+<script src="payloads.js?v=2"></script>
 <script src="firmware.js?v=4"></script>
 <script src="main.js?v=6"></script>
 
@@ -180,6 +180,7 @@ async function run() {
     //
     // Navigating away would destroy the primitives with the document, so we stay put.
     if (!window.__elfldrUp || typeof window.__sendPayload !== "function") return;
+    await import("./custom-payloads.js?v=2");
     buildPayloadMenu();
 }
 
