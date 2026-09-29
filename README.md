@@ -17,4 +17,22 @@ have to be read out of.
 
 `elf.html` is a standalone payload menu for the already-jailbroken case. It needs a
 host that runs code and can reach the console (`api/` ships PHP and node handlers),
-so it does not work on GitHub Pages - use the run page'"'"'s own menu there.
+so it does not work on GitHub Pages - use the run page's own menu there.
+
+## Payloads added in this fork
+
+Open `https://midgethd.github.io/relapse-payloads/` on the PS5. Once the exploit
+reports `elfldr is up on 127.0.0.1:9021`, use the on-page menu to send Kstuff,
+ShadowMountPlus, then etaHEN in that order. The page sends each ELF from the
+console to its own loader; GitHub Pages only serves the files.
+
+| Menu item | File | Source | SHA-256 |
+| --- | --- | --- | --- |
+| Kstuff | `payloads/kstuff.elf` | [kstuff-lite v1.11 mirror](https://github.com/itsPLK/ps5-payloads-mirror/releases/download/payloads-mirror/kstuff-lite_v1.11.elf) | `ab9a6cb4d3b1daf139d4d646e402b1cf569071acd64599c936d7a3a6164dc779` |
+| ShadowMountPlus | `payloads/shadowmountplus.elf` | [ShadowMountPlus 1.7beta2 mirror](https://github.com/itsPLK/ps5-payloads-mirror/releases/download/payloads-mirror/ShadowMountPlus_1.7beta2.elf) | `3f716a7b2220c7e87e87452ae05cad689ef842d3beb4cdad6c526cb6dfc2b6b5` |
+| etaHEN | `payloads/etaHEN.elf` | User-supplied ELF from an etaHEN community post | `8ce5ab4eaff10679920bf7397bb081ca9c18aa159d134cae8f1af3a4290b91b6` |
+
+These payloads come from separate projects: [kstuff-lite](https://github.com/EchoStretch/kstuff-lite),
+[ShadowMountPlus](https://github.com/drakmor/ShadowMountPlus), and
+[etaHEN](https://github.com/etaHEN/etaHEN). Their compatibility with firmware
+13.40 has not yet been confirmed by a successful run of all three on the PS5.
